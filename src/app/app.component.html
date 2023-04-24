@@ -1,0 +1,24 @@
+<!-- header -->
+
+<header>
+  <app-header (toggle)="sidebarToggle()"></app-header>
+</header>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" [opened]="sidebar">
+    <app-side-bar></app-side-bar>
+  </mat-drawer>
+<!-- main section -->
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<mat-divider></mat-divider>
+
+
+<!-- footer section -->
+
+<footer>
+  <app-footer></app-footer>
+</footer>
